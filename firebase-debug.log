@@ -1,0 +1,46 @@
+[debug] [2022-09-02T06:53:51.290Z] ----------------------------------------------------------------------
+[debug] [2022-09-02T06:53:51.293Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kmemo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-09-02T06:53:51.294Z] CLI Version:   11.8.0
+[debug] [2022-09-02T06:53:51.294Z] Platform:      win32
+[debug] [2022-09-02T06:53:51.294Z] Node Version:  v16.15.0
+[debug] [2022-09-02T06:53:51.295Z] Time:          Fri Sep 02 2022 12:23:51 GMT+0530 (India Standard Time)
+[debug] [2022-09-02T06:53:51.296Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-02T06:53:51.306Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-02T06:53:51.307Z] > authorizing via signed-in user (kmemon321@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\clones\web_media_player
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2022-09-02T06:55:03.189Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2022-09-02T06:55:03.190Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"webmp0209","name":"Web Media Player"}
+[debug] [2022-09-02T06:55:05.186Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2022-09-02T06:55:05.187Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5858726523071610442"}
+[debug] [2022-09-02T06:55:05.189Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5858726523071610442 [none]
+[debug] [2022-09-02T06:55:06.985Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5858726523071610442 200
+[debug] [2022-09-02T06:55:06.985Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5858726523071610442 {"name":"operations/cp.5858726523071610442","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","ready":true},"done":true,"error":{"code":9,"message":"Callers must accept Terms of Service","details":[{"@type":"type.googleapis.com/google.rpc.PreconditionFailure","violations":[{"type":"TOS","subject":"cloud","description":"Callers must accept Terms of Service"}]}]}}
+[debug] [2022-09-02T06:55:07.225Z] FirebaseError: Callers must accept Terms of Service
+    at OperationPoller.poll (C:\Users\kmemo\AppData\Roaming\npm\node_modules\firebase-tools\lib\operation-poller.js:24:19)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async createCloudProject (C:\Users\kmemo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:186:29)
+    at async createFirebaseProjectAndLog (C:\Users\kmemo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:45:9)
+    at async promptAndCreateNewProject (C:\Users\kmemo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:32:12)
+    at async doSetup (C:\Users\kmemo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+    at async init (C:\Users\kmemo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:36:9)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
